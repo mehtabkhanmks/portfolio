@@ -30,14 +30,14 @@ const STATS = [
 
 export default function About() {
   return (
-    <section id="about" style={{ padding: "100px 24px", position: "relative" }}>
+    <section id="about" className="about-section">
       <div className="section-divider" />
 
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
         {/* Header */}
-        <div style={{ marginBottom: 54 }}>
+        <div style={{ marginBottom: 44 }}>
           <p className="section-label">Background &amp; Profile</p>
-          <h2 style={{ fontSize: "clamp(1.8rem, 4vw, 2.8rem)", fontWeight: 800, color: "#F8FAFC", marginBottom: 14, lineHeight: 1.2 }}>
+          <h2 style={{ fontSize: "clamp(1.8rem, 4vw, 2.8rem)", fontWeight: 800, color: "#F8FAFC", marginBottom: 12, lineHeight: 1.2 }}>
             About <span className="gradient-text">Me</span>
           </h2>
           <p style={{ fontSize: "0.96rem", color: "#94A3B8", maxWidth: 580, lineHeight: 1.75 }}>
@@ -47,11 +47,11 @@ export default function About() {
         </div>
 
         {/* Bio + Quick facts */}
-        <div style={{ display: "grid", gridTemplateColumns: "1.1fr 0.9fr", gap: 28, marginBottom: 36 }} className="about-grid">
+        <div className="about-grid">
           {/* Bio */}
-          <div className="glass-card" style={{ padding: "32px" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 20 }}>
-              <div style={{ width: 40, height: 40, borderRadius: 10, background: "rgba(99,102,241,0.12)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.2rem" }}>👨‍💻</div>
+          <div className="glass-card" style={{ padding: "28px" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 18 }}>
+              <div style={{ width: 38, height: 38, borderRadius: 10, background: "rgba(99,102,241,0.12)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.2rem" }}>👨‍💻</div>
               <h3 style={{ fontWeight: 700, color: "#F8FAFC", fontSize: "1.05rem" }}>My Background</h3>
             </div>
             <p style={{ color: "#94A3B8", lineHeight: 1.8, fontSize: "0.92rem", marginBottom: 14 }}>
@@ -67,27 +67,27 @@ export default function About() {
           </div>
 
           {/* Quick facts */}
-          <div className="glass-card" style={{ padding: "32px" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 20 }}>
-              <div style={{ width: 40, height: 40, borderRadius: 10, background: "rgba(56,189,248,0.12)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.2rem" }}>📋</div>
+          <div className="glass-card" style={{ padding: "28px" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 18 }}>
+              <div style={{ width: 38, height: 38, borderRadius: 10, background: "rgba(56,189,248,0.12)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.2rem" }}>📋</div>
               <h3 style={{ fontWeight: 700, color: "#F8FAFC", fontSize: "1.05rem" }}>Contact &amp; Details</h3>
             </div>
             {[
               { icon: "👤", label: "Name",      value: "Mehtab Khan", href: null },
               { icon: "📍", label: "Location",  value: "Islamabad, Pakistan", href: null },
-              { icon: "🎓", label: "Education", value: "BSIT (5th Sem) — Air University", href: null },
+              { icon: "🎓", label: "Education", value: "BSIT (5th Sem) — Air Univ", href: null },
               { icon: "📧", label: "Email",     value: "mehtabkhanmks784@gmail.com", href: "mailto:mehtabkhanmks784@gmail.com" },
               { icon: "📱", label: "Phone 1",   value: "0324-0120522", href: "tel:03240120522" },
               { icon: "📱", label: "Phone 2",   value: "0328-0406784", href: "tel:03280406784" },
-              { icon: "💼", label: "LinkedIn",  value: "linkedin.com/in/mehtab-khan-521377429", href: "https://www.linkedin.com/in/mehtab-khan-521377429" },
-              { icon: "🐙", label: "GitHub",    value: "github.com/mehtabkhanmks", href: "https://github.com/mehtabkhanmks" },
+              { icon: "💼", label: "LinkedIn",  value: "mehtab-khan-521377429", href: "https://www.linkedin.com/in/mehtab-khan-521377429" },
+              { icon: "🐙", label: "GitHub",    value: "mehtabkhanmks", href: "https://github.com/mehtabkhanmks" },
             ].map((fact) => (
               <div
                 key={fact.label}
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  gap: 12,
+                  gap: 10,
                   padding: "8px 0",
                   borderBottom: "1px solid rgba(255,255,255,0.05)",
                   cursor: fact.href ? "pointer" : "default",
@@ -95,8 +95,8 @@ export default function About() {
                 onClick={() => fact.href && window.open(fact.href, "_blank")}
               >
                 <span style={{ fontSize: "0.95rem", width: 22, textAlign: "center" }}>{fact.icon}</span>
-                <span style={{ fontSize: "0.78rem", color: "#64748B", width: 70, flexShrink: 0 }}>{fact.label}</span>
-                <span style={{ fontSize: "0.85rem", color: fact.href ? "#A5B4FC" : "#cbd5e1", fontWeight: 500, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+                <span style={{ fontSize: "0.76rem", color: "#64748B", width: 68, flexShrink: 0 }}>{fact.label}</span>
+                <span style={{ fontSize: "0.83rem", color: fact.href ? "#A5B4FC" : "#cbd5e1", fontWeight: 500, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
                   {fact.value}
                 </span>
               </div>
@@ -105,12 +105,12 @@ export default function About() {
         </div>
 
         {/* Stats */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 18, marginBottom: 54 }} className="stats-grid">
+        <div className="stats-grid" style={{ marginBottom: 48 }}>
           {STATS.map((stat) => (
             <div key={stat.label} className="stat-card">
-              <div style={{ fontSize: "1.4rem", marginBottom: 6 }}>{stat.icon}</div>
-              <div style={{ fontSize: "clamp(1.5rem, 2.5vw, 2rem)", fontWeight: 800, color: "#F8FAFC", lineHeight: 1 }}>{stat.value}</div>
-              <div style={{ fontSize: "0.76rem", color: "#64748B", marginTop: 6 }}>{stat.label}</div>
+              <div style={{ fontSize: "1.3rem", marginBottom: 6 }}>{stat.icon}</div>
+              <div style={{ fontSize: "clamp(1.4rem, 2.5vw, 1.85rem)", fontWeight: 800, color: "#F8FAFC", lineHeight: 1 }}>{stat.value}</div>
+              <div style={{ fontSize: "0.74rem", color: "#64748B", marginTop: 5 }}>{stat.label}</div>
             </div>
           ))}
         </div>
@@ -118,26 +118,26 @@ export default function About() {
         {/* Education */}
         <div>
           <p className="section-label">Degrees &amp; Qualifications</p>
-          <h3 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#F8FAFC", marginBottom: 24 }}>
+          <h3 style={{ fontSize: "1.45rem", fontWeight: 700, color: "#F8FAFC", marginBottom: 20 }}>
             Academic Background
           </h3>
-          <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
             {EDUCATION.map((edu, i) => (
-              <div key={i} className="glass-card" style={{ padding: "24px 28px", display: "flex", gap: 20, alignItems: "flex-start" }}>
-                <div style={{ width: 44, height: 44, borderRadius: 12, background: `${edu.color}15`, border: `1px solid ${edu.color}25`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.3rem", flexShrink: 0 }}>
+              <div key={i} className="glass-card edu-card" style={{ padding: "22px 26px", display: "flex", gap: 18, alignItems: "flex-start" }}>
+                <div style={{ width: 42, height: 42, borderRadius: 12, background: `${edu.color}15`, border: `1px solid ${edu.color}25`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.25rem", flexShrink: 0 }}>
                   {edu.icon}
                 </div>
-                <div style={{ flex: 1 }}>
+                <div style={{ flex: 1, minWidth: 0 }}>
                   <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", flexWrap: "wrap", gap: 8, marginBottom: 4 }}>
-                    <h4 style={{ fontWeight: 700, color: "#F8FAFC", fontSize: "0.96rem" }}>{edu.degree}</h4>
-                    <span style={{ fontSize: "0.7rem", padding: "3px 12px", borderRadius: 100, background: edu.status === "Completed" ? "rgba(34,197,94,0.1)" : "rgba(99,102,241,0.1)", border: `1px solid ${edu.status === "Completed" ? "rgba(34,197,94,0.3)" : "rgba(99,102,241,0.3)"}`, color: edu.status === "Completed" ? "#22C55E" : "#818CF8", fontWeight: 600, flexShrink: 0 }}>
+                    <h4 style={{ fontWeight: 700, color: "#F8FAFC", fontSize: "0.94rem" }}>{edu.degree}</h4>
+                    <span style={{ fontSize: "0.68rem", padding: "3px 10px", borderRadius: 100, background: edu.status === "Completed" ? "rgba(34,197,94,0.1)" : "rgba(99,102,241,0.1)", border: `1px solid ${edu.status === "Completed" ? "rgba(34,197,94,0.3)" : "rgba(99,102,241,0.3)"}`, color: edu.status === "Completed" ? "#22C55E" : "#818CF8", fontWeight: 600, flexShrink: 0 }}>
                       {edu.status}
                     </span>
                   </div>
-                  <p style={{ fontSize: "0.85rem", color: "#818CF8", fontWeight: 500, marginBottom: 2 }}>{edu.institution}</p>
-                  <p style={{ fontSize: "0.78rem", color: "#64748B", marginBottom: 10 }}>{edu.period}</p>
-                  <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-                    {edu.highlights.map((h) => (<span key={h} className="skill-badge" style={{ fontSize: "0.72rem" }}>{h}</span>))}
+                  <p style={{ fontSize: "0.84rem", color: "#818CF8", fontWeight: 500, marginBottom: 2 }}>{edu.institution}</p>
+                  <p style={{ fontSize: "0.76rem", color: "#64748B", marginBottom: 10 }}>{edu.period}</p>
+                  <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+                    {edu.highlights.map((h) => (<span key={h} className="skill-badge" style={{ fontSize: "0.7rem", padding: "4px 10px" }}>{h}</span>))}
                   </div>
                 </div>
               </div>
@@ -147,9 +147,42 @@ export default function About() {
       </div>
 
       <style jsx>{`
+        .about-section {
+          padding: 90px 24px;
+          position: relative;
+        }
+
+        .about-grid {
+          display: grid;
+          grid-template-columns: 1.1fr 0.9fr;
+          gap: 24px;
+          margin-bottom: 32px;
+        }
+
+        .stats-grid {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 16px;
+        }
+
+        @media (max-width: 900px) {
+          .about-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+
         @media (max-width: 768px) {
-          .about-grid { grid-template-columns: 1fr !important; }
-          .stats-grid { grid-template-columns: repeat(2, 1fr) !important; }
+          .about-section {
+            padding: 60px 16px;
+          }
+          .stats-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+          }
+          .edu-card {
+            padding: 18px !important;
+            gap: 12px !important;
+          }
         }
       `}</style>
     </section>

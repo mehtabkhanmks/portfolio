@@ -95,14 +95,14 @@ export default function Certifications() {
   const [activeTab, setActiveTab] = useState<Tab>("coursera");
 
   return (
-    <section id="certifications" style={{ padding: "100px 24px", background: "rgba(255,255,255,0.01)", position: "relative" }}>
+    <section id="certifications" className="certs-section">
       <div className="section-divider" />
 
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
         {/* Header */}
-        <div style={{ marginBottom: 52 }}>
+        <div style={{ marginBottom: 44 }}>
           <p className="section-label">What I&apos;ve Earned</p>
-          <h2 style={{ fontSize: "clamp(1.8rem, 4vw, 2.8rem)", fontWeight: 800, color: "#F1F5F9", marginBottom: 14 }}>
+          <h2 style={{ fontSize: "clamp(1.8rem, 4vw, 2.8rem)", fontWeight: 800, color: "#F1F5F9", marginBottom: 12 }}>
             <span className="gradient-text">Certifications</span> & Courses
           </h2>
           <p style={{ color: "#94A3B8", maxWidth: 520, lineHeight: 1.75, fontSize: "0.95rem" }}>
@@ -112,16 +112,17 @@ export default function Certifications() {
         </div>
 
         {/* Tab switcher */}
-        <div style={{ display: "inline-flex", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.07)", borderRadius: 12, padding: 4, marginBottom: 36 }}>
+        <div className="tab-switcher-wrap">
           {(["coursera", "hunarmand"] as Tab[]).map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
+              className="cert-tab-btn"
               style={{
-                padding: "10px 24px", borderRadius: 9, border: "none", cursor: "pointer",
-                fontWeight: 600, fontSize: "0.84rem", transition: "all 0.25s ease",
+                padding: "9px 20px", borderRadius: 9, border: "none", cursor: "pointer",
+                fontWeight: 600, fontSize: "0.82rem", transition: "all 0.25s ease",
                 background: activeTab === tab ? "linear-gradient(135deg, #6366F1, #8B5CF6)" : "transparent",
-                color: activeTab === tab ? "#fff" : "#64748B",
+                color: activeTab === tab ? "#fff" : "#94A3B8",
                 boxShadow: activeTab === tab ? "0 4px 14px rgba(99,102,241,0.3)" : "none",
               }}
             >
@@ -134,135 +135,157 @@ export default function Certifications() {
         {activeTab === "coursera" && (
           <>
             {/* Summary row */}
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 14, marginBottom: 32 }} className="cert-stats">
+            <div className="cert-stats" style={{ marginBottom: 28 }}>
               {[
                 { label: "Certificates", value: "4", icon: "🏆" },
                 { label: "Avg Grade",    value: "97.3%", icon: "⭐" },
                 { label: "Total Hours",  value: "37 hrs", icon: "⏱️" },
-                { label: "Providers",    value: "IBM + DeepLearning.AI", icon: "🏢" },
+                { label: "Providers",    value: "IBM + DeepLearning", icon: "🏢" },
               ].map((s) => (
-                <div key={s.label} className="stat-card" style={{ padding: "16px" }}>
-                  <div style={{ fontSize: "1.3rem", marginBottom: 6 }}>{s.icon}</div>
-                  <div style={{ fontSize: "1.1rem", fontWeight: 800, color: "#F1F5F9" }}>{s.value}</div>
-                  <div style={{ fontSize: "0.72rem", color: "#64748B", marginTop: 4 }}>{s.label}</div>
+                <div key={s.label} className="stat-card" style={{ padding: "16px 12px" }}>
+                  <div style={{ fontSize: "1.2rem", marginBottom: 4 }}>{s.icon}</div>
+                  <div style={{ fontSize: "1.05rem", fontWeight: 800, color: "#F1F5F9" }}>{s.value}</div>
+                  <div style={{ fontSize: "0.7rem", color: "#64748B", marginTop: 2 }}>{s.label}</div>
                 </div>
               ))}
             </div>
 
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 24 }} className="certs-grid">
+            {/* Certs grid */}
+            <div className="certs-grid">
               {COURSERA_CERTS.map((cert) => (
-                <div key={cert.id} className="cert-card">
-                  {/* Header stripe */}
-                  <div style={{ height: 3, background: `linear-gradient(90deg, ${cert.color}, ${cert.color}55)`, borderRadius: "2px 2px 0 0", margin: "-24px -24px 20px" }} />
-
-                  <div style={{ display: "flex", gap: 14, alignItems: "flex-start", marginBottom: 14 }}>
-                    <div style={{ width: 44, height: 44, borderRadius: 12, background: `${cert.color}18`, border: `1px solid ${cert.color}25`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.3rem", flexShrink: 0 }}>
-                      🏆
-                    </div>
-                    <div style={{ flex: 1 }}>
-                      <h4 style={{ fontWeight: 700, color: "#F1F5F9", fontSize: "0.93rem", lineHeight: 1.35, marginBottom: 4 }}>{cert.title}</h4>
-                      <p style={{ fontSize: "0.8rem", color: cert.color, fontWeight: 600, margin: 0 }}>{cert.provider}</p>
-                    </div>
+                <div key={cert.id} className="cert-card" style={{ padding: "24px" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 14 }}>
+                    <span style={{ fontSize: "0.72rem", padding: "3px 10px", borderRadius: 100, background: `${cert.color}15`, border: `1px solid ${cert.color}30`, color: cert.color, fontWeight: 700 }}>
+                      {cert.provider}
+                    </span>
+                    <span style={{ fontSize: "0.75rem", color: "#22C55E", fontWeight: 700, display: "flex", alignItems: "center", gap: 4 }}>
+                      <CheckIcon /> Grade: {cert.grade}
+                    </span>
                   </div>
 
-                  {/* Meta */}
-                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 10, marginBottom: 16 }}>
-                    {[
-                      { label: "Grade",    value: cert.grade,  icon: "⭐" },
-                      { label: "Duration", value: cert.hours,  icon: "⏱️" },
-                      { label: "Issued",   value: cert.date.split(" ").slice(0,2).join(" "), icon: "📅" },
-                    ].map((m) => (
-                      <div key={m.label} style={{ padding: "10px 12px", background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.06)", borderRadius: 10, textAlign: "center" }}>
-                        <p style={{ fontSize: "0.65rem", color: "#64748B", margin: 0 }}>{m.label}</p>
-                        <p style={{ fontSize: "0.82rem", fontWeight: 700, color: "#F1F5F9", margin: 0 }}>{m.value}</p>
-                      </div>
-                    ))}
+                  <h3 style={{ fontWeight: 700, color: "#F1F5F9", fontSize: "0.98rem", lineHeight: 1.4, marginBottom: 12 }}>
+                    {cert.title}
+                  </h3>
+
+                  <div style={{ display: "flex", gap: 14, color: "#64748B", fontSize: "0.76rem", marginBottom: 16 }}>
+                    <span>📅 {cert.date}</span>
+                    <span>⏱️ {cert.hours}</span>
                   </div>
 
-                  {/* Skills */}
-                  <div style={{ display: "flex", flexWrap: "wrap", gap: 7, marginBottom: 18 }}>
+                  <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 18 }}>
                     {cert.skills.map((s) => (
-                      <span key={s} style={{ fontSize: "0.68rem", padding: "3px 10px", borderRadius: 7, background: `${cert.color}10`, border: `1px solid ${cert.color}20`, color: cert.color, fontWeight: 600 }}>{s}</span>
+                      <span key={s} style={{ fontSize: "0.68rem", padding: "3px 9px", borderRadius: 6, background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)", color: "#94A3B8" }}>
+                        {s}
+                      </span>
                     ))}
                   </div>
 
-                  {/* Verified badge + link */}
-                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-                    <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: "0.72rem", color: "#22C55E" }}>
-                      <CheckIcon /> Coursera Verified Certificate
-                    </div>
-                    <a
-                      href={cert.credentialUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{ display: "inline-flex", alignItems: "center", gap: 5, fontSize: "0.78rem", color: cert.color, textDecoration: "none", fontWeight: 500, transition: "opacity 0.2s" }}
-                    >
-                      View <ExternalIcon />
-                    </a>
-                  </div>
+                  <a
+                    href={cert.credentialUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-secondary"
+                    style={{ width: "100%", justifyContent: "center", padding: "8px 14px", fontSize: "0.78rem", gap: 6 }}
+                  >
+                    View Credential <ExternalIcon />
+                  </a>
                 </div>
               ))}
             </div>
           </>
         )}
 
-        {/* ─── Hunarmand ─── */}
+        {/* ─── Hunarmand Punjab ─── */}
         {activeTab === "hunarmand" && (
-          <>
-            <div className="glass-card" style={{ padding: "20px 28px", marginBottom: 28, display: "flex", alignItems: "center", gap: 16 }}>
-              <div style={{ width: 44, height: 44, borderRadius: 12, background: "rgba(16,185,129,0.12)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.4rem" }}>🏛️</div>
-              <div>
-                <p style={{ fontWeight: 700, color: "#F1F5F9", margin: 0, fontSize: "0.95rem" }}>Hunarmand Punjab — Government Skills Initiative</p>
-                <p style={{ color: "#64748B", fontSize: "0.78rem", margin: 0 }}>lms.hunarmandpunjab.org.pk · 2 Active Courses · Valid Lifetime</p>
-              </div>
-            </div>
-
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 24 }} className="certs-grid">
-              {HUNARMAND_CERTS.map((cert) => (
-                <div key={cert.id} className="cert-card" style={{ padding: "28px" }}>
-                  <div style={{ display: "flex", gap: 14, alignItems: "flex-start", marginBottom: 18 }}>
-                    <div style={{ width: 48, height: 48, borderRadius: 14, background: `${cert.color}15`, border: `1px solid ${cert.color}25`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.5rem", flexShrink: 0 }}>
-                      {cert.id === "h1" ? "🔐" : "🤖"}
-                    </div>
-                    <div>
-                      <h4 style={{ fontWeight: 700, color: "#F1F5F9", fontSize: "1rem", marginBottom: 4 }}>{cert.title}</h4>
-                      <p style={{ fontSize: "0.8rem", color: cert.color, fontWeight: 600, margin: 0 }}>{cert.issuer}</p>
-                      <p style={{ fontSize: "0.75rem", color: "#64748B", margin: 0 }}>{cert.provider}</p>
-                    </div>
-                  </div>
-
-                  {/* Progress */}
-                  <div style={{ marginBottom: 18 }}>
-                    <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 8 }}>
-                      <span style={{ fontSize: "0.78rem", color: "#94A3B8" }}>Course Progress</span>
-                      <span style={{ fontSize: "0.82rem", fontWeight: 700, color: cert.color, fontFamily: "monospace" }}>{cert.progress}%</span>
-                    </div>
-                    <div className="progress-bar" style={{ height: 6 }}>
-                      <div className="progress-fill" style={{ width: `${cert.progress}%`, background: `linear-gradient(90deg, ${cert.color}, ${cert.color}80)` }} />
-                    </div>
-                    <p style={{ fontSize: "0.7rem", color: "#64748B", marginTop: 6 }}>Valid Till: Lifetime · Batch-3</p>
-                  </div>
-
-                  {/* Skills */}
-                  <div style={{ display: "flex", flexWrap: "wrap", gap: 7 }}>
-                    {cert.skills.map((s) => (
-                      <span key={s} style={{ fontSize: "0.68rem", padding: "3px 10px", borderRadius: 7, background: `${cert.color}10`, border: `1px solid ${cert.color}20`, color: cert.color, fontWeight: 600 }}>{s}</span>
-                    ))}
-                  </div>
+          <div className="certs-grid">
+            {HUNARMAND_CERTS.map((cert) => (
+              <div key={cert.id} className="cert-card" style={{ padding: "24px" }}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 14 }}>
+                  <span style={{ fontSize: "0.72rem", padding: "3px 10px", borderRadius: 100, background: `${cert.color}15`, border: `1px solid ${cert.color}30`, color: cert.color, fontWeight: 700 }}>
+                    Govt. of Punjab
+                  </span>
+                  <span style={{ fontSize: "0.75rem", color: cert.color, fontWeight: 600 }}>
+                    {cert.status}
+                  </span>
                 </div>
-              ))}
-            </div>
-          </>
+
+                <h3 style={{ fontWeight: 700, color: "#F1F5F9", fontSize: "0.98rem", lineHeight: 1.4, marginBottom: 8 }}>
+                  {cert.title}
+                </h3>
+                <p style={{ fontSize: "0.78rem", color: "#64748B", marginBottom: 16 }}>{cert.provider}</p>
+
+                <div style={{ marginBottom: 18 }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 8 }}>
+                    <span style={{ fontSize: "0.78rem", color: "#94A3B8" }}>Course Progress</span>
+                    <span style={{ fontSize: "0.82rem", fontWeight: 700, color: cert.color, fontFamily: "monospace" }}>{cert.progress}%</span>
+                  </div>
+                  <div className="progress-bar" style={{ height: 6 }}>
+                    <div className="progress-fill" style={{ width: `${cert.progress}%`, background: `linear-gradient(90deg, ${cert.color}, ${cert.color}80)` }} />
+                  </div>
+                  <p style={{ fontSize: "0.7rem", color: "#64748B", marginTop: 6 }}>Valid Till: Lifetime · Batch-3</p>
+                </div>
+
+                <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+                  {cert.skills.map((s) => (
+                    <span key={s} style={{ fontSize: "0.68rem", padding: "3px 9px", borderRadius: 7, background: `${cert.color}10`, border: `1px solid ${cert.color}20`, color: cert.color, fontWeight: 600 }}>{s}</span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
         )}
       </div>
 
       <style jsx>{`
-        @media (max-width: 900px) {
-          .certs-grid  { grid-template-columns: 1fr !important; }
-          .cert-stats  { grid-template-columns: repeat(2, 1fr) !important; }
+        .certs-section {
+          padding: 90px 24px;
+          background: rgba(255,255,255,0.01);
+          position: relative;
         }
-        @media (max-width: 480px) {
-          .cert-stats  { grid-template-columns: 1fr !important; }
+
+        .tab-switcher-wrap {
+          display: inline-flex;
+          background: rgba(255,255,255,0.04);
+          border: 1px solid rgba(255,255,255,0.07);
+          border-radius: 12px;
+          padding: 4px;
+          margin-bottom: 32px;
+          flex-wrap: wrap;
+          gap: 4px;
+        }
+
+        .cert-stats {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 14px;
+        }
+
+        .certs-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+        }
+
+        @media (max-width: 900px) {
+          .certs-grid {
+            grid-template-columns: 1fr;
+          }
+          .cert-stats {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
+        @media (max-width: 768px) {
+          .certs-section {
+            padding: 60px 16px;
+          }
+          .tab-switcher-wrap {
+            width: 100%;
+          }
+          .cert-tab-btn {
+            flex: 1;
+            text-align: center;
+          }
         }
       `}</style>
     </section>

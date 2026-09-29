@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useRef } from "react";
-import Image from "next/image";
 
 const SOCIALS = [
   {
@@ -66,30 +65,25 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      style={{
-        position: "relative",
-        minHeight: "92vh",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        padding: "120px 24px 60px",
-        overflow: "hidden",
-      }}
+      className="hero-section"
     >
       <div style={{ maxWidth: 1200, width: "100%", margin: "0 auto", position: "relative", zIndex: 1 }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1.2fr 0.8fr", gap: 50, alignItems: "center" }} className="hero-grid">
+        <div className="hero-grid">
 
-          {/* ── Left ── */}
-          <div>
+          {/* ── Left / Main Content ── */}
+          <div className="hero-content">
             {/* Status badge */}
             <div
-              className="animate-fade-up"
+              className="animate-fade-up hero-badge"
               style={{
-                display: "inline-flex", alignItems: "center", gap: 8,
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 8,
                 padding: "6px 14px",
                 background: "rgba(99,102,241,0.08)",
                 border: "1px solid rgba(99,102,241,0.2)",
-                borderRadius: 100, marginBottom: 24,
+                borderRadius: 100,
+                marginBottom: 20,
               }}
             >
               <span className="status-dot" style={{ background: "#6366F1" }} />
@@ -100,51 +94,70 @@ export default function Hero() {
 
             {/* Name */}
             <h1
-              className="animate-fade-up delay-100"
-              style={{ fontSize: "clamp(2.4rem, 4.8vw, 3.8rem)", fontWeight: 800, lineHeight: 1.15, marginBottom: 12, color: "#F8FAFC" }}
+              className="animate-fade-up delay-100 hero-title"
+              style={{
+                fontSize: "clamp(2.1rem, 5.5vw, 3.8rem)",
+                fontWeight: 800,
+                lineHeight: 1.15,
+                marginBottom: 12,
+                color: "#F8FAFC",
+                letterSpacing: "-0.02em",
+              }}
             >
               Mehtab Khan
             </h1>
 
             {/* Typewriter */}
             <div
-              className="animate-fade-up delay-200"
+              className="animate-fade-up delay-200 hero-typewriter"
               style={{
-                fontSize: "clamp(1.05rem, 2vw, 1.35rem)",
-                fontWeight: 600, color: "#94A3B8",
-                marginBottom: 20, minHeight: "2em",
+                fontSize: "clamp(1rem, 2.5vw, 1.35rem)",
+                fontWeight: 600,
+                color: "#94A3B8",
+                marginBottom: 20,
+                minHeight: "1.8em",
                 fontFamily: "'JetBrains Mono', monospace",
               }}
             >
               <span style={{ color: "#6366F1" }}>&gt;</span>{" "}
               <span ref={typedRef} />
               <span style={{
-                display: "inline-block", width: 2, height: "1em",
-                background: "#6366F1", marginLeft: 2, verticalAlign: "middle",
+                display: "inline-block",
+                width: 2,
+                height: "1em",
+                background: "#6366F1",
+                marginLeft: 2,
+                verticalAlign: "middle",
                 animation: "blink 1s step-end infinite",
               }} />
             </div>
 
             {/* Bio */}
             <p
-              className="animate-fade-up delay-300"
-              style={{ fontSize: "0.98rem", color: "#94A3B8", lineHeight: 1.8, maxWidth: 560, marginBottom: 32 }}
+              className="animate-fade-up delay-300 hero-bio"
+              style={{
+                fontSize: "clamp(0.92rem, 1.8vw, 1rem)",
+                color: "#94A3B8",
+                lineHeight: 1.8,
+                maxWidth: 580,
+                marginBottom: 28,
+              }}
             >
               I am a <strong style={{ color: "#F1F5F9" }}>BSIT student (5th Semester)</strong> at{" "}
               <strong style={{ color: "#F1F5F9" }}>Air University, Islamabad</strong> with an ADCs degree in Computer Science.
-              I build scalable web applications, automate infrastructure with DevOps pipelines, and research
-              <strong style={{ color: "#F1F5F9" }}> Multi-AI Agent Systems</strong>.
+              I build scalable web applications, automate infrastructure with DevOps pipelines, and research{" "}
+              <strong style={{ color: "#F1F5F9" }}>Multi-AI Agent Systems</strong>.
             </p>
 
-            {/* CTA */}
-            <div className="animate-fade-up delay-400" style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
-              <a href="#research" className="btn-primary">
+            {/* CTA Buttons */}
+            <div className="animate-fade-up delay-400 hero-cta" style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+              <a href="#research" className="btn-primary hero-btn">
                 <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
                 </svg>
                 Explore Research
               </a>
-              <a href="#projects" className="btn-secondary">
+              <a href="#projects" className="btn-secondary hero-btn">
                 <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                 </svg>
@@ -152,8 +165,8 @@ export default function Hero() {
               </a>
             </div>
 
-            {/* Socials */}
-            <div className="animate-fade-up delay-500" style={{ display: "flex", gap: 12, marginTop: 28 }}>
+            {/* Social Links */}
+            <div className="animate-fade-up delay-500 hero-socials" style={{ display: "flex", gap: 12, marginTop: 26 }}>
               {SOCIALS.map((s) => (
                 <a
                   key={s.label}
@@ -162,11 +175,16 @@ export default function Hero() {
                   rel="noopener noreferrer"
                   title={s.label}
                   style={{
-                    width: 38, height: 38, borderRadius: 8,
-                    display: "flex", alignItems: "center", justifyContent: "center",
-                    background: "rgba(255,255,255,0.03)",
+                    width: 40,
+                    height: 40,
+                    borderRadius: 10,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    background: "rgba(255,255,255,0.04)",
                     border: "1px solid rgba(255,255,255,0.08)",
-                    color: "#94A3B8", textDecoration: "none",
+                    color: "#94A3B8",
+                    textDecoration: "none",
                     transition: "all 0.2s ease",
                   }}
                   onMouseEnter={(e) => {
@@ -177,7 +195,7 @@ export default function Hero() {
                   onMouseLeave={(e) => {
                     (e.currentTarget as HTMLElement).style.color = "#94A3B8";
                     (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.08)";
-                    (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.03)";
+                    (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.04)";
                   }}
                 >
                   {s.icon}
@@ -187,30 +205,9 @@ export default function Hero() {
           </div>
 
           {/* ── Right — Profile Photo (Circle) ── */}
-          <div className="animate-fade-up delay-300 hero-avatar" style={{ display: "flex", justifyContent: "center" }}>
-            <div
-              style={{
-                position: "relative",
-                width: 260,
-                height: 260,
-                borderRadius: "50%",
-                padding: "6px",
-                background: "linear-gradient(145deg, rgba(99, 102, 241, 0.3), rgba(255, 255, 255, 0.05))",
-                border: "1px solid rgba(255, 255, 255, 0.12)",
-                boxShadow: "0 16px 36px -10px rgba(0, 0, 0, 0.6)",
-              }}
-            >
-              <div
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  borderRadius: "50%",
-                  overflow: "hidden",
-                  position: "relative",
-                  background: "#0F1219",
-                  border: "2px solid rgba(255, 255, 255, 0.08)",
-                }}
-              >
+          <div className="animate-fade-up delay-300 hero-avatar-wrap">
+            <div className="hero-avatar-box">
+              <div className="hero-avatar-inner">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/profile_cropped.jpg"
@@ -228,21 +225,128 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Scroll hint */}
-        <div className="animate-fade-in delay-600" style={{ textAlign: "center", marginTop: 64, display: "flex", flexDirection: "column", alignItems: "center", gap: 8 }}>
-          <span style={{ fontSize: "0.68rem", color: "#475569", fontFamily: "monospace", letterSpacing: "0.1em", textTransform: "uppercase" }}>
+        {/* Scroll hint (hidden on tiny screens) */}
+        <div className="scroll-hint animate-fade-in delay-600">
+          <span style={{ fontSize: "0.68rem", color: "#64748B", fontFamily: "monospace", letterSpacing: "0.1em", textTransform: "uppercase" }}>
             Scroll to explore
           </span>
-          <div style={{ width: 24, height: 38, border: "1px solid rgba(255,255,255,0.1)", borderRadius: 12, display: "flex", alignItems: "flex-start", justifyContent: "center", padding: 4 }}>
-            <div style={{ width: 4, height: 8, borderRadius: 2, background: "#6366F1", animation: "scrollDown 2s ease infinite" }} />
+          <div style={{ width: 22, height: 34, border: "1px solid rgba(255,255,255,0.12)", borderRadius: 12, display: "flex", alignItems: "flex-start", justifyContent: "center", padding: 3 }}>
+            <div style={{ width: 4, height: 7, borderRadius: 2, background: "#6366F1", animation: "scrollDown 2s ease infinite" }} />
           </div>
         </div>
       </div>
 
       <style jsx>{`
+        .hero-section {
+          position: relative;
+          min-height: 90vh;
+          display: flex;
+          align-items: center;
+          justifyContent: center;
+          padding: 100px 24px 60px;
+          overflow: hidden;
+        }
+
+        .hero-grid {
+          display: grid;
+          grid-template-columns: 1.25fr 0.75fr;
+          gap: 48px;
+          align-items: center;
+        }
+
+        .hero-avatar-wrap {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .hero-avatar-box {
+          position: relative;
+          width: 270px;
+          height: 270px;
+          border-radius: 50%;
+          padding: 6px;
+          background: linear-gradient(145deg, rgba(99, 102, 241, 0.4), rgba(255, 255, 255, 0.08));
+          border: 1px solid rgba(255, 255, 255, 0.15);
+          box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.7), 0 0 30px rgba(99, 102, 241, 0.2);
+        }
+
+        .hero-avatar-inner {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          overflow: hidden;
+          position: relative;
+          background: #0F1219;
+          border: 2px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .scroll-hint {
+          text-align: center;
+          margin-top: 50px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 8px;
+        }
+
+        @keyframes scrollDown {
+          0% { transform: translateY(0); opacity: 1; }
+          50% { transform: translateY(12px); opacity: 0.3; }
+          100% { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Tablets & Laptops */
+        @media (max-width: 992px) {
+          .hero-grid {
+            gap: 32px;
+          }
+          .hero-avatar-box {
+            width: 220px;
+            height: 220px;
+          }
+        }
+
+        /* Smartphones & Small Tablets (Below 768px) */
         @media (max-width: 768px) {
-          .hero-grid   { grid-template-columns: 1fr !important; }
-          .hero-avatar { display: none !important; }
+          .hero-section {
+            padding: 85px 18px 40px;
+            min-height: auto;
+          }
+          .hero-grid {
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 28px;
+            text-align: center;
+          }
+          .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+          .hero-badge {
+            margin-bottom: 14px;
+          }
+          .hero-avatar-box {
+            width: 160px;
+            height: 160px;
+          }
+          .hero-cta {
+            width: 100%;
+            justify-content: center;
+          }
+          .hero-btn {
+            flex: 1 1 140px;
+            justify-content: center;
+            padding: 11px 16px;
+            font-size: 0.84rem;
+          }
+          .hero-socials {
+            justify-content: center;
+          }
+          .scroll-hint {
+            display: none;
+          }
         }
       `}</style>
     </section>

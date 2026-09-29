@@ -419,6 +419,7 @@ CERTIFICATIONS:
       >
         {/* Modal Top Bar */}
         <div
+          className="cv-top-bar"
           style={{
             padding: "14px 20px",
             borderBottom: "1px solid rgba(255,255,255,0.08)",
@@ -441,7 +442,7 @@ CERTIFICATIONS:
               </span>
             </div>
           </div>
-          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+          <div className="cv-actions" style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
             <button
               onClick={handleDownloadDoc}
               style={{
@@ -516,8 +517,9 @@ CERTIFICATIONS:
 
         {/* Modal On-Screen View */}
         <div
+          className="cv-body-pad"
           style={{
-            padding: "28px 32px",
+            padding: "24px 28px",
             overflowY: "auto",
             color: "#CBD5E1",
             lineHeight: 1.45,
@@ -566,7 +568,7 @@ CERTIFICATIONS:
             <h2 style={{ fontSize: "0.86rem", fontWeight: 700, color: "#F8FAFC", textTransform: "uppercase", letterSpacing: "0.08em", borderLeft: "3px solid #6366F1", paddingLeft: 8, marginBottom: 8 }}>
               Education
             </h2>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+            <div className="cv-edu-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
               <div style={{ padding: "8px 12px", background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.06)", borderRadius: 6 }}>
                 <div style={{ display: "flex", justifyContent: "space-between" }}>
                   <strong style={{ color: "#F8FAFC", fontSize: "0.82rem" }}>BS in Information Technology (BSIT)</strong>
@@ -589,7 +591,7 @@ CERTIFICATIONS:
             <h2 style={{ fontSize: "0.86rem", fontWeight: 700, color: "#F8FAFC", textTransform: "uppercase", letterSpacing: "0.08em", borderLeft: "3px solid #6366F1", paddingLeft: 8, marginBottom: 6 }}>
               Technical Core Competencies
             </h2>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, fontSize: "0.78rem" }}>
+            <div className="cv-skills-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, fontSize: "0.78rem" }}>
               <div>
                 <strong style={{ color: "#F8FAFC" }}>Frontend &amp; Languages: </strong>
                 <span style={{ color: "#94A3B8" }}>React.js, Next.js, JavaScript, TypeScript, Tailwind CSS, Redux</span>
@@ -616,7 +618,7 @@ CERTIFICATIONS:
             </h2>
 
             <div style={{ marginBottom: 8 }}>
-              <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 4 }}>
                 <strong style={{ color: "#F8FAFC", fontSize: "0.82rem" }}>
                   1. V.I.B.E — Validated Intelligent Bidding Engine (Final Year Project)
                 </strong>
@@ -628,7 +630,7 @@ CERTIFICATIONS:
             </div>
 
             <div style={{ marginBottom: 8 }}>
-              <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 4 }}>
                 <strong style={{ color: "#F8FAFC", fontSize: "0.82rem" }}>
                   2. Creativity — IP &amp; Creative Asset Marketplace
                 </strong>
@@ -640,7 +642,7 @@ CERTIFICATIONS:
             </div>
 
             <div>
-              <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 4 }}>
                 <strong style={{ color: "#F8FAFC", fontSize: "0.82rem" }}>
                   3. DevOps Polyglot 3-Tier Microservices Pipeline
                 </strong>
@@ -657,7 +659,7 @@ CERTIFICATIONS:
             <h2 style={{ fontSize: "0.86rem", fontWeight: 700, color: "#F8FAFC", textTransform: "uppercase", letterSpacing: "0.08em", borderLeft: "3px solid #6366F1", paddingLeft: 8, marginBottom: 6 }}>
               Verified Certifications (Coursera &amp; Punjab Govt)
             </h2>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 6, fontSize: "0.76rem" }}>
+            <div className="cv-certs-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 6, fontSize: "0.76rem" }}>
               <div>• <strong>Generative AI: Prompt Engineering Basics</strong> — IBM (Coursera: 100%)</div>
               <div>• <strong>Generative AI: Applications</strong> — IBM (Coursera: 95%)</div>
               <div>• <strong>Introduction to Artificial Intelligence</strong> — IBM (Coursera: 98%)</div>
@@ -669,8 +671,21 @@ CERTIFICATIONS:
 
       <style jsx>{`
         @media (max-width: 640px) {
+          .cv-top-bar {
+            padding: 10px 14px !important;
+          }
+          .cv-actions {
+            width: 100%;
+            justify-content: flex-start;
+          }
+          .cv-body-pad {
+            padding: 16px !important;
+          }
           .cv-contact-col {
             text-align: left !important;
+          }
+          .cv-edu-grid, .cv-skills-grid, .cv-certs-grid {
+            grid-template-columns: 1fr !important;
           }
         }
       `}</style>

@@ -60,13 +60,13 @@ const ExternalIcon = () => (
 
 export default function Projects() {
   return (
-    <section id="projects" style={{ padding: "100px 24px" }}>
+    <section id="projects" className="projects-section">
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
 
         {/* Header */}
-        <div style={{ marginBottom: 52 }}>
+        <div style={{ marginBottom: 44 }}>
           <p className="section-label">What I&apos;ve Built</p>
-          <h2 style={{ fontSize: "clamp(1.8rem, 4vw, 2.8rem)", fontWeight: 800, color: "#F1F5F9", marginBottom: 14 }}>
+          <h2 style={{ fontSize: "clamp(1.8rem, 4vw, 2.8rem)", fontWeight: 800, color: "#F1F5F9", marginBottom: 12 }}>
             Featured <span className="gradient-text">Projects</span>
           </h2>
           <p style={{ color: "#94A3B8", maxWidth: 520, lineHeight: 1.75, fontSize: "0.95rem" }}>
@@ -79,25 +79,25 @@ export default function Projects() {
           href="https://github.com/mehtabkhanmks"
           target="_blank"
           rel="noopener noreferrer"
-          className="glass-card"
-          style={{ display: "flex", alignItems: "center", gap: 16, padding: "18px 26px", marginBottom: 36, textDecoration: "none", cursor: "pointer" }}
+          className="glass-card github-banner"
+          style={{ display: "flex", alignItems: "center", gap: 14, padding: "16px 22px", marginBottom: 32, textDecoration: "none", cursor: "pointer" }}
         >
-          <div style={{ color: "#94A3B8" }}><GitHubIcon /></div>
-          <div style={{ flex: 1 }}>
-            <p style={{ color: "#F1F5F9", fontWeight: 600, margin: 0, fontSize: "0.93rem" }}>github.com/mehtabkhanmks</p>
-            <p style={{ color: "#64748B", fontSize: "0.78rem", margin: 0 }}>View all repositories & contributions</p>
+          <div style={{ color: "#94A3B8", flexShrink: 0 }}><GitHubIcon /></div>
+          <div style={{ flex: 1, minWidth: 0 }}>
+            <p style={{ color: "#F1F5F9", fontWeight: 600, margin: 0, fontSize: "0.92rem", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>github.com/mehtabkhanmks</p>
+            <p style={{ color: "#64748B", fontSize: "0.76rem", margin: 0 }}>View all repositories & contributions</p>
           </div>
-          <ExternalIcon />
+          <div style={{ flexShrink: 0 }}><ExternalIcon /></div>
         </a>
 
         {/* Projects */}
-        <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
           {PROJECTS.map((project) => {
             const sc = STATUS_COLORS[project.status] ?? STATUS_COLORS["In Progress"];
             return (
               <div
                 key={project.id}
-                className="glass-card"
+                className="glass-card project-card-item"
                 style={{
                   padding: 0, overflow: "hidden",
                   borderColor: project.highlight ? `${project.color}35` : undefined,
@@ -107,36 +107,35 @@ export default function Projects() {
                 {/* Top colour strip */}
                 <div style={{ height: 3, background: `linear-gradient(90deg, ${project.color}, ${project.color}55)` }} />
 
-                <div style={{ padding: "28px 32px" }}>
-                  <div style={{ display: "grid", gridTemplateColumns: "1fr auto", gap: 24, alignItems: "start" }} className="proj-inner">
+                <div className="proj-content-pad" style={{ padding: "24px 28px" }}>
+                  <div className="proj-inner">
 
-                    {/* Left */}
+                    {/* Left Details */}
                     <div>
-                      <div style={{ display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap", marginBottom: 10 }}>
+                      <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", marginBottom: 10 }}>
                         <h3 style={{ fontWeight: 700, color: "#F1F5F9", fontSize: "1.05rem" }}>{project.title}</h3>
-                        <span style={{ fontSize: "0.68rem", padding: "2px 10px", borderRadius: 100, background: sc.bg, border: `1px solid ${sc.border}`, color: sc.text, fontWeight: 600 }}>
+                        <span style={{ fontSize: "0.68rem", padding: "2px 9px", borderRadius: 100, background: sc.bg, border: `1px solid ${sc.border}`, color: sc.text, fontWeight: 600 }}>
                           {project.status}
                         </span>
                         {project.badge && (
-                          <span style={{ fontSize: "0.68rem", padding: "2px 10px", borderRadius: 100, background: `${project.color}15`, border: `1px solid ${project.color}30`, color: project.color, fontWeight: 600 }}>
+                          <span style={{ fontSize: "0.68rem", padding: "2px 9px", borderRadius: 100, background: `${project.color}15`, border: `1px solid ${project.color}30`, color: project.color, fontWeight: 600 }}>
                             {project.badge}
                           </span>
                         )}
                       </div>
-                      <p style={{ color: "#94A3B8", fontSize: "0.88rem", lineHeight: 1.72, marginBottom: 18 }}>{project.description}</p>
-                      <div style={{ display: "flex", flexWrap: "wrap", gap: 7 }}>
+                      <p style={{ color: "#94A3B8", fontSize: "0.88rem", lineHeight: 1.72, marginBottom: 16 }}>{project.description}</p>
+                      <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
                         {project.tech.map((t) => (<span key={t} className="tech-tag">{t}</span>))}
                       </div>
                     </div>
 
                     {/* Right — links */}
-                    <div style={{ display: "flex", flexDirection: "column", gap: 10, alignItems: "flex-end" }}>
+                    <div className="proj-actions">
                       <a
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn-secondary"
-                        style={{ padding: "9px 18px", fontSize: "0.8rem", gap: 6, whiteSpace: "nowrap" }}
+                        className="btn-secondary proj-btn"
                       >
                         <GitHubIcon /> Code
                       </a>
@@ -145,8 +144,7 @@ export default function Projects() {
                           href={project.live}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="btn-primary"
-                          style={{ padding: "9px 18px", fontSize: "0.8rem", gap: 6, whiteSpace: "nowrap" }}
+                          className="btn-primary proj-btn"
                         >
                           <ExternalIcon /> Live Demo
                         </a>
@@ -161,8 +159,53 @@ export default function Projects() {
       </div>
 
       <style jsx>{`
-        @media (max-width: 640px) {
-          .proj-inner { grid-template-columns: 1fr !important; }
+        .projects-section {
+          padding: 90px 24px;
+        }
+
+        .proj-inner {
+          display: grid;
+          grid-template-columns: 1fr auto;
+          gap: 24px;
+          align-items: start;
+        }
+
+        .proj-actions {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          align-items: flex-end;
+        }
+
+        .proj-btn {
+          padding: 9px 18px;
+          font-size: 0.8rem;
+          gap: 6px;
+          white-space: nowrap;
+        }
+
+        @media (max-width: 768px) {
+          .projects-section {
+            padding: 60px 16px;
+          }
+          .proj-content-pad {
+            padding: 20px !important;
+          }
+          .proj-inner {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+          }
+          .proj-actions {
+            flex-direction: row;
+            width: 100%;
+            align-items: stretch;
+            gap: 10px;
+          }
+          .proj-btn {
+            flex: 1;
+            justify-content: center;
+          }
         }
       `}</style>
     </section>
