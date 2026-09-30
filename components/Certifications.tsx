@@ -11,7 +11,7 @@ const COURSERA_CERTS = [
     grade: "100%",
     hours: "9 hours",
     credentialUrl: "https://coursera.org/share/d3b51c202e5776df19c847d1c3934826",
-    color: "#6366F1",
+    color: "#0EA5E9",
     skills: ["Prompt Engineering", "Generative AI", "LLM", "ChatGPT", "IBM Watson"],
   },
   {
@@ -23,7 +23,7 @@ const COURSERA_CERTS = [
     grade: "95%",
     hours: "8 hours",
     credentialUrl: "https://coursera.org/share/818e8479b97734b3efe2d8d9d5aa11f2",
-    color: "#22D3EE",
+    color: "#06B6D4",
     skills: ["Generative AI", "NLP", "AI Applications", "IBM", "Text Generation"],
   },
   {
@@ -35,7 +35,7 @@ const COURSERA_CERTS = [
     grade: "98%",
     hours: "13 hours",
     credentialUrl: "https://coursera.org/share/8ec180e5bdd874affb0f83612aeaade9",
-    color: "#8B5CF6",
+    color: "#2563EB",
     skills: ["AI Fundamentals", "Machine Learning", "Deep Learning", "Neural Networks", "IBM"],
   },
   {
@@ -47,7 +47,7 @@ const COURSERA_CERTS = [
     grade: "96.25%",
     hours: "7 hours",
     credentialUrl: "https://coursera.org/share/78558e8eadf7410342892c882139dab4",
-    color: "#F59E0B",
+    color: "#10B981",
     skills: ["AI Strategy", "Machine Learning", "AI Ethics", "Data Science", "Applied ML"],
   },
 ];
@@ -72,7 +72,7 @@ const HUNARMAND_CERTS = [
     platform: "lms.hunarmandpunjab.org.pk",
     progress: 21,
     status: "21% Completed",
-    color: "#6366F1",
+    color: "#0EA5E9",
     skills: ["Artificial Intelligence", "Machine Learning", "AI Applications", "Innovation"],
   },
 ];
@@ -121,9 +121,9 @@ export default function Certifications() {
               style={{
                 padding: "9px 20px", borderRadius: 9, border: "none", cursor: "pointer",
                 fontWeight: 600, fontSize: "0.82rem", transition: "all 0.25s ease",
-                background: activeTab === tab ? "linear-gradient(135deg, #6366F1, #8B5CF6)" : "transparent",
+                background: activeTab === tab ? "linear-gradient(135deg, #0284C7, #0EA5E9)" : "transparent",
                 color: activeTab === tab ? "#fff" : "#94A3B8",
-                boxShadow: activeTab === tab ? "0 4px 14px rgba(99,102,241,0.3)" : "none",
+                boxShadow: activeTab === tab ? "0 4px 14px rgba(14,165,233,0.3)" : "none",
               }}
             >
               {tab === "coursera" ? "📜 Coursera (IBM & DeepLearning.AI)" : "🏛️ Hunarmand Punjab"}

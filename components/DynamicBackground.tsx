@@ -72,9 +72,9 @@ export default function DynamicBackground() {
         height * 0.5,
         width * 0.8
       );
-      gradient.addColorStop(0, "rgba(79, 70, 229, 0.04)");
-      gradient.addColorStop(0.5, "rgba(56, 189, 248, 0.02)");
-      gradient.addColorStop(1, "rgba(9, 11, 16, 0)");
+      gradient.addColorStop(0, "rgba(2, 132, 199, 0.05)");
+      gradient.addColorStop(0.5, "rgba(16, 185, 129, 0.02)");
+      gradient.addColorStop(1, "rgba(8, 10, 15, 0)");
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, width, height);
 
@@ -102,7 +102,7 @@ export default function DynamicBackground() {
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(165, 180, 252, ${p.alpha})`;
+        ctx.fillStyle = `rgba(186, 230, 253, ${p.alpha})`;
         ctx.fill();
 
         // Connect nearby particles
@@ -117,7 +117,7 @@ export default function DynamicBackground() {
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(p2.x, p2.y);
-            ctx.strokeStyle = `rgba(99, 102, 241, ${lineAlpha})`;
+            ctx.strokeStyle = `rgba(14, 165, 233, ${lineAlpha})`;
             ctx.lineWidth = 0.8;
             ctx.stroke();
           }

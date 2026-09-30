@@ -140,14 +140,14 @@ export default function Navbar() {
                 width: 32,
                 height: 32,
                 borderRadius: 8,
-                background: "linear-gradient(135deg, #4F46E5, #6366F1)",
+                background: "linear-gradient(135deg, #0284C7, #0EA5E9)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
                 fontSize: "0.85rem",
                 fontWeight: 800,
                 color: "#fff",
-                boxShadow: "0 2px 10px rgba(79, 70, 229, 0.4)",
+                boxShadow: "0 2px 10px rgba(14, 165, 233, 0.35)",
               }}
             >
               MK
@@ -174,7 +174,7 @@ export default function Navbar() {
                 style={{
                   color:
                     activeSection === link.href.slice(1)
-                      ? "#F8FAFC"
+                      ? "#38BDF8"
                       : undefined,
                   fontWeight: activeSection === link.href.slice(1) ? 600 : 500,
                 }}
@@ -194,19 +194,19 @@ export default function Navbar() {
                 fontSize: "0.82rem",
                 fontWeight: 600,
                 borderRadius: "8px",
-                border: "1px solid rgba(99,102,241,0.35)",
-                background: "rgba(99,102,241,0.12)",
-                color: "#A5B4FC",
+                border: "1px solid rgba(14, 165, 233, 0.3)",
+                background: "rgba(14, 165, 233, 0.08)",
+                color: "#38BDF8",
                 cursor: "pointer",
                 transition: "all 0.2s ease",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.background = "#4F46E5";
+                e.currentTarget.style.background = "#0284C7";
                 e.currentTarget.style.color = "#FFFFFF";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.background = "rgba(99,102,241,0.12)";
-                e.currentTarget.style.color = "#A5B4FC";
+                e.currentTarget.style.background = "rgba(14, 165, 233, 0.08)";
+                e.currentTarget.style.color = "#38BDF8";
               }}
             >
               📄 View CV
@@ -233,9 +233,9 @@ export default function Navbar() {
                 fontSize: "0.78rem",
                 fontWeight: 600,
                 borderRadius: "8px",
-                border: "1px solid rgba(99,102,241,0.35)",
-                background: "rgba(99,102,241,0.15)",
-                color: "#C7D2FE",
+                border: "1px solid rgba(14, 165, 233, 0.35)",
+                background: "rgba(14, 165, 233, 0.12)",
+                color: "#38BDF8",
                 cursor: "pointer",
               }}
             >
@@ -250,7 +250,7 @@ export default function Navbar() {
                 fontSize: "0.78rem",
                 fontWeight: 600,
                 borderRadius: "8px",
-                background: "#4F46E5",
+                background: "linear-gradient(135deg, #0284C7, #0EA5E9)",
                 color: "#FFFFFF",
                 textDecoration: "none",
               }}
@@ -271,92 +271,24 @@ export default function Navbar() {
             width: "100%",
             maxWidth: 500,
             margin: "0 auto",
-            padding: "6px 4px 8px",
+            padding: "6px 2px 8px",
           }}
         >
-          {/* Home Tab */}
-          <a
-            href="#hero"
-            className={`bottom-tab-item ${activeSection === "hero" ? "active" : ""}`}
-            title="Home"
-          >
-            <span className="tab-icon">
-              <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-              </svg>
-            </span>
-            <span className="tab-label">Home</span>
-          </a>
-
-          {/* About Tab */}
-          <a
-            href="#about"
-            className={`bottom-tab-item ${activeSection === "about" ? "active" : ""}`}
-            title="About"
-          >
-            <span className="tab-icon">
-              <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-              </svg>
-            </span>
-            <span className="tab-label">About</span>
-          </a>
-
-          {/* Skills Tab */}
-          <a
-            href="#skills"
-            className={`bottom-tab-item ${activeSection === "skills" ? "active" : ""}`}
-            title="Skills"
-          >
-            <span className="tab-icon">
-              <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
-            </span>
-            <span className="tab-label">Skills</span>
-          </a>
-
-          {/* Projects Tab */}
-          <a
-            href="#projects"
-            className={`bottom-tab-item ${activeSection === "projects" ? "active" : ""}`}
-            title="Projects"
-          >
-            <span className="tab-icon">
-              <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-              </svg>
-            </span>
-            <span className="tab-label">Projects</span>
-          </a>
-
-          {/* Research Tab */}
-          <a
-            href="#research"
-            className={`bottom-tab-item ${activeSection === "research" ? "active" : ""}`}
-            title="Research"
-          >
-            <span className="tab-icon">
-              <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-              </svg>
-            </span>
-            <span className="tab-label">Research</span>
-          </a>
-
-          {/* Contact Tab */}
-          <a
-            href="#contact"
-            className={`bottom-tab-item ${activeSection === "contact" ? "active" : ""}`}
-            title="Contact"
-          >
-            <span className="tab-icon">
-              <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-            </span>
-            <span className="tab-label">Contact</span>
-          </a>
+          {navLinks.map((link) => {
+            const sectionId = link.href.slice(1);
+            const isActive = activeSection === sectionId;
+            return (
+              <a
+                key={link.href}
+                href={link.href}
+                className={`bottom-tab-item ${isActive ? "active" : ""}`}
+                title={link.label}
+              >
+                <span className="tab-icon">{link.icon}</span>
+                <span className="tab-label">{link.label}</span>
+              </a>
+            );
+          })}
         </nav>
       </div>
 
@@ -407,13 +339,13 @@ export default function Navbar() {
         }
 
         .bottom-tab-item.active {
-          color: #818CF8;
+          color: #38BDF8;
         }
 
         .bottom-tab-item.active .tab-icon {
           transform: translateY(-2px) scale(1.1);
-          color: #818CF8;
-          filter: drop-shadow(0 0 6px rgba(99, 102, 241, 0.6));
+          color: #38BDF8;
+          filter: drop-shadow(0 0 6px rgba(14, 165, 233, 0.5));
         }
 
         .bottom-tab-item.active .tab-label {

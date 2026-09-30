@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 
 const SOCIALS = [
   {
@@ -80,14 +81,14 @@ export default function Hero() {
                 alignItems: "center",
                 gap: 8,
                 padding: "6px 14px",
-                background: "rgba(99,102,241,0.08)",
-                border: "1px solid rgba(99,102,241,0.2)",
+                background: "rgba(14, 165, 233, 0.08)",
+                border: "1px solid rgba(14, 165, 233, 0.22)",
                 borderRadius: 100,
                 marginBottom: 20,
               }}
             >
-              <span className="status-dot" style={{ background: "#6366F1" }} />
-              <span style={{ fontSize: "0.78rem", color: "#A5B4FC", fontWeight: 500 }}>
+              <span className="status-dot" style={{ background: "#0EA5E9" }} />
+              <span style={{ fontSize: "0.78rem", color: "#38BDF8", fontWeight: 500 }}>
                 BSIT Student · Air University Islamabad
               </span>
             </div>
@@ -119,13 +120,13 @@ export default function Hero() {
                 fontFamily: "'JetBrains Mono', monospace",
               }}
             >
-              <span style={{ color: "#6366F1" }}>&gt;</span>{" "}
+              <span style={{ color: "#0EA5E9" }}>&gt;</span>{" "}
               <span ref={typedRef} />
               <span style={{
                 display: "inline-block",
                 width: 2,
                 height: "1em",
-                background: "#6366F1",
+                background: "#0EA5E9",
                 marginLeft: 2,
                 verticalAlign: "middle",
                 animation: "blink 1s step-end infinite",
@@ -146,7 +147,7 @@ export default function Hero() {
               I am a <strong style={{ color: "#F1F5F9" }}>BSIT student (5th Semester)</strong> at{" "}
               <strong style={{ color: "#F1F5F9" }}>Air University, Islamabad</strong> with an ADCs degree in Computer Science.
               I build scalable web applications, automate infrastructure with DevOps pipelines, and research{" "}
-              <strong style={{ color: "#F1F5F9" }}>Multi-AI Agent Systems</strong>.
+              <strong style={{ color: "#38BDF8" }}>Multi-AI Agent Systems</strong>.
             </p>
 
             {/* CTA Buttons */}
@@ -189,8 +190,8 @@ export default function Hero() {
                   }}
                   onMouseEnter={(e) => {
                     (e.currentTarget as HTMLElement).style.color = "#F8FAFC";
-                    (e.currentTarget as HTMLElement).style.borderColor = "rgba(99,102,241,0.5)";
-                    (e.currentTarget as HTMLElement).style.background = "rgba(99,102,241,0.12)";
+                    (e.currentTarget as HTMLElement).style.borderColor = "rgba(14, 165, 233, 0.45)";
+                    (e.currentTarget as HTMLElement).style.background = "rgba(14, 165, 233, 0.1)";
                   }}
                   onMouseLeave={(e) => {
                     (e.currentTarget as HTMLElement).style.color = "#94A3B8";
@@ -208,10 +209,12 @@ export default function Hero() {
           <div className="animate-fade-up delay-300 hero-avatar-wrap">
             <div className="hero-avatar-box">
               <div className="hero-avatar-inner">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
                   src="/profile_cropped.jpg"
                   alt="Mehtab Khan"
+                  width={270}
+                  height={270}
+                  priority
                   style={{
                     width: "100%",
                     height: "100%",
@@ -231,7 +234,7 @@ export default function Hero() {
             Scroll to explore
           </span>
           <div style={{ width: 22, height: 34, border: "1px solid rgba(255,255,255,0.12)", borderRadius: 12, display: "flex", alignItems: "flex-start", justifyContent: "center", padding: 3 }}>
-            <div style={{ width: 4, height: 7, borderRadius: 2, background: "#6366F1", animation: "scrollDown 2s ease infinite" }} />
+            <div style={{ width: 4, height: 7, borderRadius: 2, background: "#0EA5E9", animation: "scrollDown 2s ease infinite" }} />
           </div>
         </div>
       </div>
@@ -266,9 +269,9 @@ export default function Hero() {
           height: 270px;
           border-radius: 50%;
           padding: 6px;
-          background: linear-gradient(145deg, rgba(99, 102, 241, 0.4), rgba(255, 255, 255, 0.08));
+          background: linear-gradient(145deg, rgba(14, 165, 233, 0.4), rgba(16, 185, 129, 0.15));
           border: 1px solid rgba(255, 255, 255, 0.15);
-          box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.7), 0 0 30px rgba(99, 102, 241, 0.2);
+          box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.7), 0 0 30px rgba(14, 165, 233, 0.18);
         }
 
         .hero-avatar-inner {

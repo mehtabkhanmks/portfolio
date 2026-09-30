@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const CATEGORIES = [
   {
-    id: "frontend", label: "Frontend", icon: "🎨", color: "#6366F1",
+    id: "frontend", label: "Frontend", icon: "🎨", color: "#0EA5E9",
     skills: [
       { name: "React.js / React 18-19", level: 88 },
       { name: "Next.js",                level: 82 },
@@ -16,7 +16,7 @@ const CATEGORIES = [
     ],
   },
   {
-    id: "backend", label: "Backend", icon: "⚙️", color: "#22D3EE",
+    id: "backend", label: "Backend", icon: "⚙️", color: "#10B981",
     skills: [
       { name: "Node.js",        level: 85 },
       { name: "Express.js",     level: 83 },
@@ -29,7 +29,7 @@ const CATEGORIES = [
     ],
   },
   {
-    id: "devops", label: "DevOps", icon: "🚀", color: "#8B5CF6",
+    id: "devops", label: "DevOps", icon: "🚀", color: "#F59E0B",
     skills: [
       { name: "Docker",         level: 80 },
       { name: "Jenkins CI/CD",  level: 76 },
@@ -42,7 +42,7 @@ const CATEGORIES = [
     ],
   },
   {
-    id: "ai", label: "AI & Research", icon: "🧠", color: "#F59E0B",
+    id: "ai", label: "AI & Research", icon: "🧠", color: "#06B6D4",
     skills: [
       { name: "Generative AI",       level: 72 },
       { name: "Prompt Engineering",  level: 78 },

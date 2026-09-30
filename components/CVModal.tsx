@@ -482,13 +482,13 @@ CERTIFICATIONS:
                 padding: "7px 15px",
                 fontSize: "0.8rem",
                 borderRadius: "8px",
-                border: "1px solid #4F46E5",
-                background: "#4F46E5",
+                border: "1px solid #0284C7",
+                background: "linear-gradient(135deg, #0284C7, #0EA5E9)",
                 color: "#FFFFFF",
                 cursor: "pointer",
                 fontWeight: 600,
                 transition: "all 0.2s",
-                boxShadow: "0 2px 10px rgba(79, 70, 229, 0.4)",
+                boxShadow: "0 2px 10px rgba(14, 165, 233, 0.35)",
               }}
             >
               🖨️ Save as PDF (1 Page)
@@ -528,13 +528,13 @@ CERTIFICATIONS:
           }}
         >
           {/* Header */}
-          <div style={{ borderBottom: "2px solid #4F46E5", paddingBottom: 14, marginBottom: 16 }}>
+          <div style={{ borderBottom: "2px solid #0EA5E9", paddingBottom: 14, marginBottom: 16 }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: 10 }}>
               <div>
                 <h1 style={{ fontSize: "1.75rem", fontWeight: 800, color: "#F8FAFC", margin: 0, letterSpacing: "-0.02em" }}>
                   Mehtab Khan
                 </h1>
-                <p style={{ color: "#818CF8", fontWeight: 600, fontSize: "0.92rem", marginTop: 2, marginBottom: 0 }}>
+                <p style={{ color: "#38BDF8", fontWeight: 600, fontSize: "0.92rem", marginTop: 2, marginBottom: 0 }}>
                   Full Stack Developer &bull; DevOps Engineer &bull; AI Systems
                 </p>
                 <p style={{ color: "#94A3B8", fontSize: "0.78rem", margin: "2px 0 0" }}>
@@ -546,8 +546,8 @@ CERTIFICATIONS:
               <div style={{ display: "flex", flexDirection: "column", gap: 3, fontSize: "0.78rem", color: "#94A3B8", textAlign: "right" }} className="cv-contact-col">
                 <div>📧 <a href="mailto:mehtabkhanmks784@gmail.com" style={{ color: "#F1F5F9", textDecoration: "none" }}>mehtabkhanmks784@gmail.com</a></div>
                 <div>📱 <span style={{ color: "#F1F5F9" }}>+92 324 0120522 &bull; +92 328 0406784</span></div>
-                <div>💼 <a href="https://www.linkedin.com/in/mehtab-khan-521377429" target="_blank" rel="noopener noreferrer" style={{ color: "#818CF8", textDecoration: "none" }}>linkedin.com/in/mehtab-khan-521377429</a></div>
-                <div>🐙 <a href="https://github.com/mehtabkhanmks" target="_blank" rel="noopener noreferrer" style={{ color: "#818CF8", textDecoration: "none" }}>github.com/mehtabkhanmks</a></div>
+                <div>💼 <a href="https://www.linkedin.com/in/mehtab-khan-521377429" target="_blank" rel="noopener noreferrer" style={{ color: "#38BDF8", textDecoration: "none" }}>linkedin.com/in/mehtab-khan-521377429</a></div>
+                <div>🐙 <a href="https://github.com/mehtabkhanmks" target="_blank" rel="noopener noreferrer" style={{ color: "#38BDF8", textDecoration: "none" }}>github.com/mehtabkhanmks</a></div>
                 <div>📍 <span style={{ color: "#F1F5F9" }}>Islamabad, Pakistan</span></div>
               </div>
             </div>
@@ -555,7 +555,7 @@ CERTIFICATIONS:
 
           {/* Profile Summary */}
           <div style={{ marginBottom: 14 }}>
-            <h2 style={{ fontSize: "0.86rem", fontWeight: 700, color: "#F8FAFC", textTransform: "uppercase", letterSpacing: "0.08em", borderLeft: "3px solid #6366F1", paddingLeft: 8, marginBottom: 4 }}>
+            <h2 style={{ fontSize: "0.86rem", fontWeight: 700, color: "#F8FAFC", textTransform: "uppercase", letterSpacing: "0.08em", borderLeft: "3px solid #0EA5E9", paddingLeft: 8, marginBottom: 4 }}>
               Professional Summary
             </h2>
             <p style={{ color: "#94A3B8", fontSize: "0.8rem", lineHeight: 1.5, margin: 0 }}>
@@ -565,21 +565,21 @@ CERTIFICATIONS:
 
           {/* Education */}
           <div style={{ marginBottom: 14 }}>
-            <h2 style={{ fontSize: "0.86rem", fontWeight: 700, color: "#F8FAFC", textTransform: "uppercase", letterSpacing: "0.08em", borderLeft: "3px solid #6366F1", paddingLeft: 8, marginBottom: 8 }}>
+            <h2 style={{ fontSize: "0.86rem", fontWeight: 700, color: "#F8FAFC", textTransform: "uppercase", letterSpacing: "0.08em", borderLeft: "3px solid #0EA5E9", paddingLeft: 8, marginBottom: 8 }}>
               Education
             </h2>
             <div className="cv-edu-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
               <div style={{ padding: "8px 12px", background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.06)", borderRadius: 6 }}>
                 <div style={{ display: "flex", justifyContent: "space-between" }}>
                   <strong style={{ color: "#F8FAFC", fontSize: "0.82rem" }}>BS in Information Technology (BSIT)</strong>
-                  <span style={{ fontSize: "0.72rem", color: "#818CF8" }}>2023 – Present</span>
+                  <span style={{ fontSize: "0.72rem", color: "#38BDF8" }}>2023 – Present</span>
                 </div>
                 <p style={{ color: "#94A3B8", fontSize: "0.76rem", margin: "2px 0 0" }}>Air University Islamabad (5th Sem)</p>
               </div>
               <div style={{ padding: "8px 12px", background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.06)", borderRadius: 6 }}>
                 <div style={{ display: "flex", justifyContent: "space-between" }}>
                   <strong style={{ color: "#F8FAFC", fontSize: "0.82rem" }}>Associate Degree in Computing (CS)</strong>
-                  <span style={{ fontSize: "0.72rem", color: "#22C55E" }}>Completed</span>
+                  <span style={{ fontSize: "0.72rem", color: "#10B981" }}>Completed</span>
                 </div>
                 <p style={{ color: "#94A3B8", fontSize: "0.76rem", margin: "2px 0 0" }}>Air University Islamabad (2021 – 2023)</p>
               </div>
@@ -588,7 +588,7 @@ CERTIFICATIONS:
 
           {/* Technical Skills */}
           <div style={{ marginBottom: 14 }}>
-            <h2 style={{ fontSize: "0.86rem", fontWeight: 700, color: "#F8FAFC", textTransform: "uppercase", letterSpacing: "0.08em", borderLeft: "3px solid #6366F1", paddingLeft: 8, marginBottom: 6 }}>
+            <h2 style={{ fontSize: "0.86rem", fontWeight: 700, color: "#F8FAFC", textTransform: "uppercase", letterSpacing: "0.08em", borderLeft: "3px solid #0EA5E9", paddingLeft: 8, marginBottom: 6 }}>
               Technical Core Competencies
             </h2>
             <div className="cv-skills-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, fontSize: "0.78rem" }}>
@@ -613,7 +613,7 @@ CERTIFICATIONS:
 
           {/* Key Projects */}
           <div style={{ marginBottom: 14 }}>
-            <h2 style={{ fontSize: "0.86rem", fontWeight: 700, color: "#F8FAFC", textTransform: "uppercase", letterSpacing: "0.08em", borderLeft: "3px solid #6366F1", paddingLeft: 8, marginBottom: 8 }}>
+            <h2 style={{ fontSize: "0.86rem", fontWeight: 700, color: "#F8FAFC", textTransform: "uppercase", letterSpacing: "0.08em", borderLeft: "3px solid #0EA5E9", paddingLeft: 8, marginBottom: 8 }}>
               Selected Projects
             </h2>
 
@@ -622,7 +622,7 @@ CERTIFICATIONS:
                 <strong style={{ color: "#F8FAFC", fontSize: "0.82rem" }}>
                   1. V.I.B.E — Validated Intelligent Bidding Engine (Final Year Project)
                 </strong>
-                <span style={{ fontSize: "0.72rem", color: "#818CF8" }}>React &bull; Node.js &bull; Python &bull; Redis</span>
+                <span style={{ fontSize: "0.72rem", color: "#0EA5E9" }}>React &bull; Node.js &bull; Python &bull; Redis</span>
               </div>
               <p style={{ fontSize: "0.76rem", color: "#94A3B8", margin: "2px 0 0" }}>
                 • Built a real-time auction engine with ML fraud detection, sub-second WebSocket bidding synchronization, and admin telemetry.
@@ -634,7 +634,7 @@ CERTIFICATIONS:
                 <strong style={{ color: "#F8FAFC", fontSize: "0.82rem" }}>
                   2. Creativity — IP &amp; Creative Asset Marketplace
                 </strong>
-                <span style={{ fontSize: "0.72rem", color: "#22D3EE" }}>React 19 &bull; Vite &bull; JWT Auth &bull; Express</span>
+                <span style={{ fontSize: "0.72rem", color: "#10B981" }}>React 19 &bull; Vite &bull; JWT Auth &bull; Express</span>
               </div>
               <p style={{ fontSize: "0.76rem", color: "#94A3B8", margin: "2px 0 0" }}>
                 • Developed a creator marketplace enabling authors and engineers to publish, monetize, and protect digital assets with JWT auth.
@@ -646,7 +646,7 @@ CERTIFICATIONS:
                 <strong style={{ color: "#F8FAFC", fontSize: "0.82rem" }}>
                   3. DevOps Polyglot 3-Tier Microservices Pipeline
                 </strong>
-                <span style={{ fontSize: "0.72rem", color: "#8B5CF6" }}>Docker &bull; Jenkins &bull; Azure &bull; .NET</span>
+                <span style={{ fontSize: "0.72rem", color: "#F59E0B" }}>Docker &bull; Jenkins &bull; Azure &bull; .NET</span>
               </div>
               <p style={{ fontSize: "0.76rem", color: "#94A3B8", margin: "2px 0 0" }}>
                 • Architected a containerized 3-tier polyglot architecture with automated Jenkins CI/CD pipelines and Azure cloud hosting.
@@ -656,7 +656,7 @@ CERTIFICATIONS:
 
           {/* Verified Certifications */}
           <div>
-            <h2 style={{ fontSize: "0.86rem", fontWeight: 700, color: "#F8FAFC", textTransform: "uppercase", letterSpacing: "0.08em", borderLeft: "3px solid #6366F1", paddingLeft: 8, marginBottom: 6 }}>
+            <h2 style={{ fontSize: "0.86rem", fontWeight: 700, color: "#F8FAFC", textTransform: "uppercase", letterSpacing: "0.08em", borderLeft: "3px solid #0EA5E9", paddingLeft: 8, marginBottom: 6 }}>
               Verified Certifications (Coursera &amp; Punjab Govt)
             </h2>
             <div className="cv-certs-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 6, fontSize: "0.76rem" }}>

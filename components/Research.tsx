@@ -5,10 +5,10 @@ const RESEARCH_AREAS = [
     id: "r1",
     title: "Multi-AI Agent Systems & Recursive Self-Improvement",
     status: "In Progress",
-    statusColor: "#6366F1",
+    statusColor: "#0EA5E9",
     area: "AI Agent Research",
     icon: "🤖",
-    color: "#6366F1",
+    color: "#0EA5E9",
     description:
       "Researching recursive self-improvement (RSI) in AI agents — systems where an AI agent rewrites and improves its own code in an ongoing loop. The architecture involves two loops: an inner loop agent that solves research tasks and an outer loop agent that rewrites the inner agent based on performance scores.",
     details: [
@@ -24,10 +24,10 @@ const RESEARCH_AREAS = [
     id: "r2",
     title: "AI-Driven Text-to-Video & Anime Generation (FYP Pipeline)",
     status: "In Progress",
-    statusColor: "#22D3EE",
+    statusColor: "#10B981",
     area: "Generative AI / Computer Vision",
     icon: "🎬",
-    color: "#22D3EE",
+    color: "#10B981",
     description:
       "Building a text-to-video/anime pipeline as a Final Year Project concept — chaining existing free open-source models instead of training from scratch. The pipeline converts text into LLM script/scene breakdown, then keyframe images, then image-to-video clips, voice + music, and finally FFmpeg assembly into an episode.",
     details: [
@@ -48,7 +48,7 @@ const PAPERS = [
     id: "arXiv:2609.35719",
     area: "AI Agents",
     date: "Sep 2026",
-    color: "#6366F1",
+    color: "#0EA5E9",
   },
   {
     title: "Reinforcing Agentic Creativity in Scientific Ideation with Night Science",
@@ -56,7 +56,7 @@ const PAPERS = [
     id: "arXiv:2609.35706",
     area: "AI / Science",
     date: "Sep 2026",
-    color: "#8B5CF6",
+    color: "#10B981",
   },
   {
     title: "Deciphering the Feature Representation of Deep Neural Networks for High-Performance AI",
@@ -64,13 +64,13 @@ const PAPERS = [
     id: "HAI · Machine Learning",
     area: "Deep Learning",
     date: "Aug 2024",
-    color: "#22D3EE",
+    color: "#06B6D4",
   },
 ];
 
 const PLATFORMS = [
-  { name: "arXiv.org",  desc: "Reading latest CS & AI research papers",        icon: "📄", color: "#6366F1" },
-  { name: "Stanford HAI", desc: "Human-Centered AI research and publications",  icon: "🏛️", color: "#22D3EE" },
+  { name: "arXiv.org",  desc: "Reading latest CS & AI research papers",        icon: "📄", color: "#0EA5E9" },
+  { name: "Stanford HAI", desc: "Human-Centered AI research and publications",  icon: "🏛️", color: "#10B981" },
   { name: "Claude AI",  desc: "AI-assisted research & paper breakdowns",        icon: "🤖", color: "#F59E0B" },
 ];
 
@@ -87,8 +87,8 @@ export default function Research() {
           </h2>
           <p style={{ color: "#94A3B8", maxWidth: 580, lineHeight: 1.75, fontSize: "0.95rem" }}>
             Actively reading academic papers on arXiv and Stanford HAI, using Claude AI for research assistance,
-            and building experimental AI pipelines in <strong style={{ color: "#cbd5e1" }}>Multi-AI Agent Systems</strong> and{" "}
-            <strong style={{ color: "#cbd5e1" }}>Text-to-Video generation</strong>.
+            and building experimental AI pipelines in <strong style={{ color: "#38BDF8" }}>Multi-AI Agent Systems</strong> and{" "}
+            <strong style={{ color: "#10B981" }}>Text-to-Video generation</strong>.
           </p>
         </div>
 
@@ -149,7 +149,7 @@ export default function Research() {
         {/* Papers read */}
         <div className="glass-card papers-box" style={{ padding: "24px 28px" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 18 }}>
-            <div style={{ width: 38, height: 38, borderRadius: 10, background: "rgba(99,102,241,0.1)", border: "1px solid rgba(99,102,241,0.2)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.1rem" }}>📄</div>
+            <div style={{ width: 38, height: 38, borderRadius: 10, background: "rgba(14,165,233,0.1)", border: "1px solid rgba(14,165,233,0.2)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.1rem" }}>📄</div>
             <div>
               <h3 style={{ fontWeight: 700, color: "#F1F5F9", margin: 0, fontSize: "0.96rem" }}>Research Papers Read</h3>
               <p style={{ color: "#64748B", fontSize: "0.74rem", margin: 0 }}>Academic papers studied across arXiv and Stanford HAI</p>
@@ -163,7 +163,7 @@ export default function Research() {
                 className="paper-item"
                 style={{ display: "flex", alignItems: "center", gap: 12, padding: "12px 16px", background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.06)", borderRadius: 10, transition: "all 0.25s ease" }}
               >
-                <span style={{ color: "#6366F1", fontFamily: "monospace", fontSize: "0.76rem", flexShrink: 0 }}>[{String(i + 1).padStart(2, "0")}]</span>
+                <span style={{ color: "#0EA5E9", fontFamily: "monospace", fontSize: "0.76rem", flexShrink: 0 }}>[{String(i + 1).padStart(2, "0")}]</span>
                 <span style={{ color: "#cbd5e1", fontSize: "0.84rem", flex: 1, minWidth: 0 }}>{paper.title}</span>
                 <span style={{ fontSize: "0.68rem", padding: "2px 8px", borderRadius: 6, background: `${paper.color}10`, border: `1px solid ${paper.color}20`, color: paper.color, fontWeight: 600, flexShrink: 0 }}>{paper.area}</span>
                 <span className="paper-source" style={{ color: "#64748B", fontSize: "0.74rem", flexShrink: 0 }}>{paper.source} · {paper.date}</span>

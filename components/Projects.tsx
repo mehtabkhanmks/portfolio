@@ -11,7 +11,7 @@ const PROJECTS = [
     live: "https://vibe-auction-platform.vercel.app",
     status: "Completed",
     highlight: true,
-    color: "#6366F1",
+    color: "#0EA5E9",
     badge: "FYP Project",
   },
   {
@@ -24,7 +24,7 @@ const PROJECTS = [
     live: "https://creativity-puce.vercel.app",
     status: "Completed",
     highlight: false,
-    color: "#22D3EE",
+    color: "#10B981",
     badge: "Live on Vercel",
   },
   {
@@ -37,14 +37,14 @@ const PROJECTS = [
     live: "https://github.com/mehtabkhanmks/devops-engineering-project",
     status: "Completed",
     highlight: false,
-    color: "#8B5CF6",
+    color: "#F59E0B",
     badge: "19 Commits · CI/CD",
   },
 ];
 
 const STATUS_COLORS: Record<string, { bg: string; text: string; border: string }> = {
-  "Completed":   { bg: "rgba(34,197,94,0.1)",  text: "#22C55E", border: "rgba(34,197,94,0.25)"  },
-  "In Progress": { bg: "rgba(99,102,241,0.1)",  text: "#6366F1", border: "rgba(99,102,241,0.25)" },
+  "Completed":   { bg: "rgba(16,185,129,0.1)",  text: "#10B981", border: "rgba(16,185,129,0.25)" },
+  "In Progress": { bg: "rgba(14,165,233,0.1)",  text: "#0EA5E9", border: "rgba(14,165,233,0.25)" },
 };
 
 const GitHubIcon = () => (

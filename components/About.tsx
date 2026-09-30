@@ -6,7 +6,7 @@ const EDUCATION = [
     institution: "Air University — Main Campus, Islamabad, Pakistan",
     period: "2023 – Present",
     status: "5th Semester (Current)",
-    color: "#6366F1",
+    color: "#0EA5E9",
     icon: "🎓",
     highlights: ["Continuation from ADCs (CS) program", "Core Focus: Software Engineering & Infrastructure", "AI Systems & Applied Tech Projects"],
   },
@@ -15,7 +15,7 @@ const EDUCATION = [
     institution: "Air University — Main Campus, Islamabad, Pakistan",
     period: "2021 – 2023",
     status: "Completed",
-    color: "#8B5CF6",
+    color: "#10B981",
     icon: "🏛️",
     highlights: ["2-Year Computer Science Degree", "Solid Foundation in Programming & Networking", "Successfully Graduated"],
   },
@@ -51,7 +51,7 @@ export default function About() {
           {/* Bio */}
           <div className="glass-card" style={{ padding: "28px" }}>
             <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 18 }}>
-              <div style={{ width: 38, height: 38, borderRadius: 10, background: "rgba(99,102,241,0.12)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.2rem" }}>👨‍💻</div>
+              <div style={{ width: 38, height: 38, borderRadius: 10, background: "rgba(14, 165, 233, 0.12)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.2rem" }}>👨‍💻</div>
               <h3 style={{ fontWeight: 700, color: "#F8FAFC", fontSize: "1.05rem" }}>My Background</h3>
             </div>
             <p style={{ color: "#94A3B8", lineHeight: 1.8, fontSize: "0.92rem", marginBottom: 14 }}>
@@ -62,14 +62,14 @@ export default function About() {
               My technical skills cover <strong style={{ color: "#F1F5F9" }}>Full Stack Web Development</strong> (React, Node.js, Next.js, Express) and <strong style={{ color: "#F1F5F9" }}>DevOps</strong> (Docker, Jenkins, Azure, CI/CD pipelines).
             </p>
             <p style={{ color: "#94A3B8", lineHeight: 1.8, fontSize: "0.92rem" }}>
-              I actively expand my knowledge through certified coursework on <strong style={{ color: "#F1F5F9" }}>Coursera</strong> (IBM &amp; DeepLearning.AI) and explore ongoing research in <strong style={{ color: "#F1F5F9" }}>Multi-AI Agent Architectures</strong> and generative workflows.
+              I actively expand my knowledge through certified coursework on <strong style={{ color: "#F1F5F9" }}>Coursera</strong> (IBM &amp; DeepLearning.AI) and explore ongoing research in <strong style={{ color: "#38BDF8" }}>Multi-AI Agent Architectures</strong> and generative workflows.
             </p>
           </div>
 
           {/* Quick facts */}
           <div className="glass-card" style={{ padding: "28px" }}>
             <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 18 }}>
-              <div style={{ width: 38, height: 38, borderRadius: 10, background: "rgba(56,189,248,0.12)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.2rem" }}>📋</div>
+              <div style={{ width: 38, height: 38, borderRadius: 10, background: "rgba(16, 185, 129, 0.12)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.2rem" }}>📋</div>
               <h3 style={{ fontWeight: 700, color: "#F8FAFC", fontSize: "1.05rem" }}>Contact &amp; Details</h3>
             </div>
             {[
@@ -96,7 +96,7 @@ export default function About() {
               >
                 <span style={{ fontSize: "0.95rem", width: 22, textAlign: "center" }}>{fact.icon}</span>
                 <span style={{ fontSize: "0.76rem", color: "#64748B", width: 68, flexShrink: 0 }}>{fact.label}</span>
-                <span style={{ fontSize: "0.83rem", color: fact.href ? "#A5B4FC" : "#cbd5e1", fontWeight: 500, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+                <span style={{ fontSize: "0.83rem", color: fact.href ? "#38BDF8" : "#cbd5e1", fontWeight: 500, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
                   {fact.value}
                 </span>
               </div>
@@ -130,11 +130,11 @@ export default function About() {
                 <div style={{ flex: 1, minWidth: 0 }}>
                   <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", flexWrap: "wrap", gap: 8, marginBottom: 4 }}>
                     <h4 style={{ fontWeight: 700, color: "#F8FAFC", fontSize: "0.94rem" }}>{edu.degree}</h4>
-                    <span style={{ fontSize: "0.68rem", padding: "3px 10px", borderRadius: 100, background: edu.status === "Completed" ? "rgba(34,197,94,0.1)" : "rgba(99,102,241,0.1)", border: `1px solid ${edu.status === "Completed" ? "rgba(34,197,94,0.3)" : "rgba(99,102,241,0.3)"}`, color: edu.status === "Completed" ? "#22C55E" : "#818CF8", fontWeight: 600, flexShrink: 0 }}>
+                    <span style={{ fontSize: "0.68rem", padding: "3px 10px", borderRadius: 100, background: edu.status === "Completed" ? "rgba(16,185,129,0.1)" : "rgba(14,165,233,0.1)", border: `1px solid ${edu.status === "Completed" ? "rgba(16,185,129,0.3)" : "rgba(14,165,233,0.3)"}`, color: edu.status === "Completed" ? "#10B981" : "#38BDF8", fontWeight: 600, flexShrink: 0 }}>
                       {edu.status}
                     </span>
                   </div>
-                  <p style={{ fontSize: "0.84rem", color: "#818CF8", fontWeight: 500, marginBottom: 2 }}>{edu.institution}</p>
+                  <p style={{ fontSize: "0.84rem", color: edu.color, fontWeight: 500, marginBottom: 2 }}>{edu.institution}</p>
                   <p style={{ fontSize: "0.76rem", color: "#64748B", marginBottom: 10 }}>{edu.period}</p>
                   <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
                     {edu.highlights.map((h) => (<span key={h} className="skill-badge" style={{ fontSize: "0.7rem", padding: "4px 10px" }}>{h}</span>))}

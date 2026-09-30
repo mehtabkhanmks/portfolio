@@ -2,12 +2,12 @@
 import { useState, FormEvent } from "react";
 
 const CONTACT_INFO = [
-  { icon: "📧", label: "Email",    value: "mehtabkhanmks784@gmail.com", href: "mailto:mehtabkhanmks784@gmail.com", color: "#6366F1" },
+  { icon: "📧", label: "Email",    value: "mehtabkhanmks784@gmail.com", href: "mailto:mehtabkhanmks784@gmail.com", color: "#0EA5E9" },
   { icon: "📱", label: "Phone 1",  value: "0324-0120522", href: "tel:03240120522", color: "#10B981" },
   { icon: "📱", label: "Phone 2",  value: "0328-0406784", href: "tel:03280406784", color: "#10B981" },
   { icon: "💼", label: "LinkedIn", value: "linkedin.com/in/mehtab-khan-521377429", href: "https://www.linkedin.com/in/mehtab-khan-521377429", color: "#0A66C2" },
   { icon: "🐙", label: "GitHub",   value: "github.com/mehtabkhanmks", href: "https://github.com/mehtabkhanmks", color: "#94A3B8" },
-  { icon: "📍", label: "Location", value: "Islamabad, Pakistan", href: null, color: "#EF4444" },
+  { icon: "📍", label: "Location", value: "Islamabad, Pakistan", href: null, color: "#F59E0B" },
 ];
 
 export default function Contact() {
@@ -80,7 +80,7 @@ export default function Contact() {
                   onClick={() => c.href && window.open(c.href, "_blank")}
                   onMouseEnter={(e) => {
                     if (c.href) {
-                      (e.currentTarget as HTMLElement).style.borderColor = "rgba(99,102,241,0.4)";
+                      (e.currentTarget as HTMLElement).style.borderColor = "rgba(14,165,233,0.4)";
                       (e.currentTarget as HTMLElement).style.background = "var(--bg-card-hover)";
                     }
                   }}
